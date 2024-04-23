@@ -49,7 +49,7 @@ _______
 
 ### Презентация и скриншоты
 _______
-[Презентация проекта](https://docs.google.com/presentation/d/12N74IXxokV-SG35yEG0DYGu36ga75ObwIjIbbWt8Xyg/edit?pli=1#slide=id.p8)
+[Презентация проекта](https://clck.ru/3AFvZP)
 
 Скриншот №1
 

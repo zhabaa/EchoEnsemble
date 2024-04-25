@@ -3,16 +3,36 @@ body {
   background-color: #000;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 
+/* .background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+.background img {
+  position: relative;
+  align-content: center;
+  min-width: 50%;
+  min-height: 50%;
+  margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  transform: scale(1.2);
+} */
+
 .form {
+  position: relative;
+  top: 150px;
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 500px;
+  height: 580px;
   padding: 20px;
-  width: 320px;
+  width: 400px;
 }
 
 .title {
@@ -35,13 +55,6 @@ body {
   height: 50px;
   position: relative;
   width: 100%;
-}
-
-.ic1 {
-  margin-top: 40px;
-}
-
-.ic2 {
   margin-top: 30px;
 }
 
@@ -58,7 +71,7 @@ body {
   width: 100%;
 }
 
-.cut {
+.input-container .cut {
   background-color: #15172b;
   border-radius: 10px;
   height: 20px;
@@ -70,16 +83,32 @@ body {
   width: 76px;
 }
 
-.cut-short {
-  width: 150px;
+.ic1 {
+  margin-top: 40px;
 }
 
-.cut_short_1 {
-  width: 100px;
+.ic1 .cut {
+  width: 55px;
 }
 
-.input:focus ~ .cut,
-.input:not(:placeholder-shown) ~ .cut {
+.ic2 {
+  margin-top: 30px;
+}
+
+.ic2 .cut {
+  width: 53px;
+}
+
+.ic3 .cut {
+  width: 63px;
+}
+
+.ic4 .cut {
+  width: 135px;
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
   transform: translateY(8px);
 }
 
@@ -95,17 +124,22 @@ body {
   top: 20px;
 }
 
-.input:focus ~ .placeholder,
-.input:not(:placeholder-shown) ~ .placeholder {
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input:not(:placeholder-shown) ~ .placeholder {
+.input:not(:placeholder-shown)~.placeholder {
   color: #808097;
 }
 
-.input:focus ~ .placeholder {
+.input:focus~.placeholder {
   color: #dc2f55;
+}
+
+input[type=checkbox] {
+  transform: scale(1.1);
+  margin: auto auto auto none;
 }
 
 .submit {
@@ -117,7 +151,7 @@ body {
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 30px;
   outline: 0;
   text-align: center;
   width: 100%;
@@ -130,8 +164,13 @@ body {
 .form .checkbox label {
   color: #fff;
   font-family: sans-serif;
+  margin-left: 10px;
 }
 
-.checkbox {
-  margin-top: 20px;
+.form .checkbox {
+  margin-top: 30px;
 }
+
+/* .checkbox {
+  margin-top: 20px;
+} */

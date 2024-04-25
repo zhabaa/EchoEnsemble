@@ -48,7 +48,7 @@ def register():
     form = RegisterForm()
 
     params = {
-
+        'css_style': url_for('static', filename='css/style_register.css')
     }
 
     # + проверка в бд + созадть юзера

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=" {{ css_style }} ">
+  <link rel="stylesheet" href="..\static\css\style_login.css">
+  <title> {{ title }} </title>
+</head>
+
+<body>
+    <!-- <div class="background">
+        <img src="../static/images/background-image.jpg" id="bg_img" />
+    </div> -->
+
+  <form class="form" action="/login" method="post">
+
+
+    <div class="title">
+      EchoEnsamble
+    </div>
+
+    <div class="subtitle">
+       Вход в аккаунт
+    </div>
+
+    <div class="input-container ic2">
+      <input id="lastname" class="input" type="text" placeholder=" " />
+      <div class="cut"></div>
+      <label for="lastname" class="placeholder">Email</label>
+    </div>
+
+    <div class="input-container ic3">
+      <input id="password" class="input" type="text" placeholder=" " />
+      <div class="cut"></div>
+      <label for="password" class="placeholder">Пароль</label>
+    </div>
+
+    <div class="subtitle auth">
+        <a href=" {{ register }} " class="link l1">
+            Создать аккаунт
+        </a>
+    </div>
+    <div class="subtitle help">
+        <a href=" {{ help }} " class="link l2">
+            Восстановить пароль
+        </a>
+    </div>
+
+    <a>
+      <button type="submit" class="submit">Войти</button>
+    </a>
+  </form>
+</body>
+
+</html>

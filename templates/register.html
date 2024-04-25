@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href=" {{ css_style }} ">
-  <title>Document</title>
+  <link rel="stylesheet" href="..\static\css\style_register.css">
+  <title> {{ title }} </title>
 </head>
+
 <body>
-  <div class="form">
-    <div class="title">EchoEnsamble</div>
-    <div class="subtitle">Давай создадим твой новый аккаунт!</div>
+  <!-- <div class="background">
+    <img src="../static/images/background-image.jpg" id="bg_img" />
+  </div> -->
+
+  <form class="form" action="/register" method="post">
+    <div class="title">
+      EchoEnsamble
+    </div>
+
+    <div class="subtitle">
+      Давай создадим новый аккаунт!
+    </div>
+
     <div class="input-container ic1">
       <input id="firstname" class="input" type="text" placeholder=" " />
       <div class="cut"></div>
       <label for="firstname" class="placeholder">Логин</label>
     </div>
+
     <div class="input-container ic2">
       <input id="lastname" class="input" type="text" placeholder=" " />
       <div class="cut"></div>
       <label for="lastname" class="placeholder">Email</label>
     </div>
-    <div class="input-container ic2">
+
+    <div class="input-container ic3">
       <input id="password" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short_1"></div>
+      <div class="cut"></div>
       <label for="password" class="placeholder">Пароль</label>
     </div>
-    <div class="input-container ic2">
+
+    <div class="input-container ic4">
       <input id="email_1" class="input" type="text" placeholder=" " />
-      <div class="cut cut-short"></div>
+      <div class="cut"></div>
       <label for="email_1" class="placeholder">Подтвердите пароль</label>
     </div>
+
     <div class="checkbox">
       <input type="checkbox" name="scales" id="scales">
-      <label for="Scales">Я являюсь японской шлюхой</label>
+      <label for="Scales">Я музыкант</label>
     </div>
 
     <a>
-      <button type="text" class="submit">Создать</button>
+      <button type="submit" class="submit">Создать</button>
     </a>
-  </div>
+  </form>
 </body>
+
 </html>
-
-

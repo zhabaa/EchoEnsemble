@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+
+.container {
+    display: flex;
+    flex: content;
+
+    font-family: sans-serif;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 90%;
+}
+
+
+.player {
+    position: relative;
+
+    margin-top: 10%;
+    background-color: #fff;
+
+    width: 400px;
+    height: 500px;
+
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.player-img {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    top: -50px;
+    left: 50px;
+}
+
+.player-img img {
+    object-fit: cover;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.player-img img.active {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.info {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: #222; */
+
+    top: -30px;
+}
+
+.info .title {
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+
+.info .singer {
+    text-align: center;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #6e6e6e;
+}
+
+.play-field {
+    position: relative;
+
+    top: -20px;
+
+    display: flex;
+    flex: auto;
+
+    height: 60px;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.play-button {
+    transform: scale(4);
+    cursor: pointer;
+}
+
+span .play {
+    cursor: pointer;
+}
+
+.fa-forward-step {
+    cursor: pointer;
+    transform: scale(2.5);
+}
+
+.fa-backward-step {
+    cursor: pointer;
+    transform: scale(2.5);
+}
+
+
+.music-box {
+    display: flex;
+    flex: content;
+
+    align-items: center;
+    justify-content: space-around;
+
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.current-time {
+    text-align: center;
+}
+
+input[type="range"] .seekbar {
+    width: 300px;
+}
+
+.music-box .seekbar {
+    width: 80%;
+}
+
+.duration {
+    text-align: center;
+}
+
+
+.buttons-volume {
+    display: flex;
+    width: 100%;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    justify-content: space-between;
+}
+
+.btn-box {
+    display: flex;
+
+    height: 30px;
+
+}
+
+.fa-repeat {
+    position: relative;
+    transform: scale(2);
+    cursor: pointer;
+    left: 10px;
+    top: 30px;
+}
+
+.fa-repeat:hover {
+    color: #6e6e6e;
+}
+
+
+.fa-heart {
+    position: relative;
+    transform: scale(2);
+    cursor: pointer;
+
+    /* .active {
+        transform-origin: '<i class="fa-solid fa-heart"></i>'
+    } */
+    top: 30px;
+    left: 33px;
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+.range-slider {
+    position: relative;
+    justify-self: right;
+    cursor: grab;
+    top: 30px;
+    left: -50px;
+}
+
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* width: 100px; */
+    background-color: transparent;
+
+    &:focus {
+        outline-color: #f8b195;
+    }
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: rgb(246, 114, 128);
+    background: -webkit-linear-gradient(left,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    background: linear-gradient(to right,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67280",
+            endColorstr="#355c7d",
+            GradientType=1);
+}
+
+input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: rgb(246, 114, 128);
+    background: -moz-linear-gradient(left,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    background: linear-gradient(to right,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67280",
+            endColorstr="#355c7d",
+            GradientType=1);
+}
+
+input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: rgb(246, 114, 128);
+    background: -moz-linear-gradient(left,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    background: -webkit-linear-gradient(left,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    background: linear-gradient(to right,
+            rgba(246, 114, 128, 1) 0%,
+            rgba(192, 108, 132, 1) 50%,
+            rgba(53, 92, 125, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f67280",
+            endColorstr="#355c7d",
+            GradientType=1);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #f8b195;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    bottom: 8px;
+    background: #222 url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png") center no-repeat;
+    background-size: 50%;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #f8b195;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    bottom: 8px;
+    background: #222 url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png") center no-repeat;
+    background-size: 50%;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+input[type="range"]::-ms-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #f8b195;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    bottom: 8px;
+    background: #222 url("http://codemenatalie.com/wp-content/uploads/2019/09/slider-thumb.png") center no-repeat;
+    background-size: 50%;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.fa-volume-low {
+    position: relative;
+    cursor: pointer;
+    transform: scale(2);
+    top: 30px;
+    left: 60px;
+}
+
+.fa-volume-low:hover {
+    color: #6e6e6e;    
+}

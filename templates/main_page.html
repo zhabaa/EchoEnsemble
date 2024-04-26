@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href=" {{ style_css }} ">
+    <link rel="stylesheet" href=" {{ style_player_css }} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+    <script defer type="text/javascript" src=" {{ script_js }} "></script>
+
+    <title> {{title}} </title>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li> EchoEnsamble <span></span></li>
+        <!-- <li>MY LIBRARY</li> -->
+        <li> Profile</li>
+    </ul>
+    <div class="search">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="Search Musik...">
+    </div>
+    <div class="user">
+        <img src=" {{ icon_path }} " alt="User" title=" {{ username }} ">
+    </div>
+</nav>
+
+<div class="container">
+    <div class="player">
+        <div class="player-img">
+            <img src=" {{ image_path }} " id="cover" class="active"/>
+        </div>
+
+        <div class="info">
+            <div class="title"> {{ name }}</div>
+            <div class="singer"> {{ artist }}</div>
+        </div>
+
+        <div class="play-field">
+                <span class="backword-step">
+                    <i class="fa-solid fa-backward-step"></i>
+                </span>
+
+            <span class="play" onclick="handlePlay()">
+                    <i class="fa-solid fa-play play-button" title="Воспроизведение"></i>
+                </span>
+
+            <span class="forward-step">
+                    <i class="fa-solid fa-forward-step"></i>
+                </span>
+        </div>
+
+        <div class="music-box">
+            <span class="current-time">0:00</span>
+
+            <input type="range" step="1" class="seekbar" value="0" min="0" max="100" oninput="handleSeekBar()">
+
+            <audio class="music-element">
+                <source src=" {{ music_path }} " type="audio/mp3">
+            </audio>
+
+            <span class="duration">0:00</span>
+        </div>
+
+        <div class="buttons-volume">
+
+            <div class="btn-box">
+                <i class="material-icons repeat" onclick="handleRepeat()">
+                    <i class="fa-solid fa-repeat"></i>
+                </i>
+
+                <i class="material-icons favorite active" onclick="handleFavorite()">
+                    <i class="fa-solid fa-heart"></i>
+
+                </i>
+
+                <i class="material-icons volume" onclick="handleVolume()">
+                    <i class="fa-solid fa-volume-low"></i>
+                </i>
+
+            </div>
+
+            <div class="range-slider">
+                <input class="volume-bar" type="range" min="0" max="100" value="50"
+                       oninput="music.volume = this.value/100"/>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

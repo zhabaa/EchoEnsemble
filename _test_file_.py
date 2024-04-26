@@ -1,12 +1,25 @@
-import pprint
+from static.data.binary import write_to_file
+from static.data.database import MusicDB
 
-from static.data.database import UserDB
-from config import _USER_DATABASE_
+from config import _MUSIC_DATABASE_
 
-db = UserDB('users', _USER_DATABASE_)
+db = MusicDB('music', _MUSIC_DATABASE_)
 
-data = db.get_data("""SELECT * FROM Users""", ())
+# data = db.add_song(
+#     'Гроза',
+#     'Сова',
+#     convert_to_binary_data('static/music/Sova_-_Groza.mp3'),
+#     'groza',
+#     convert_to_binary_data('static/music/sova_image.jpg')
+# )
 
-print(data)
+
+data = db.get_song_data('groza')[0]
+# data = ''.join(data
+
+# with open('log.txt', 'w', encoding='utf-8') as output:
+#     output.write(str(data))
+print(len(data))
+write_to_file(data[3], 'static/temp/out.mp3')
 
 db.close_connection()

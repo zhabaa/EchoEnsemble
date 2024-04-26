@@ -2,43 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href=" {{ css_style }} ">
-  <link rel="stylesheet" href="..\static\css\style_login.css">
-  <title> {{ title }} </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {{ style_css }} ">
+    <!--  <link rel="stylesheet" href="..\static\css\style_login.css">-->
+    <title> {{ title }} </title>
 </head>
 
 <body>
-    <!-- <div class="background">
-        <img src="../static/images/background-image.jpg" id="bg_img" />
-    </div> -->
+<!-- <div class="background">
+    <img src="../static/images/background-image.jpg" id="bg_img" />
+</div> -->
 
-  <form class="form" action="/login" method="post">
+<form class="form" action="/login" method="post">
 
 
     <div class="title">
-      EchoEnsamble
+        EchoEnsamble
     </div>
 
     <div class="subtitle">
-       Вход в аккаунт
+        Вход в аккаунт
     </div>
 
     <div class="input-container ic2">
-      <input id="lastname" class="input" type="text" placeholder=" " />
-      <div class="cut"></div>
-      <label for="lastname" class="placeholder">Email</label>
+        <input name="email" id="email" class="input" type="text" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="email" class="placeholder">Email</label>
     </div>
 
     <div class="input-container ic3">
-      <input id="password" class="input" type="text" placeholder=" " />
-      <div class="cut"></div>
-      <label for="password" class="placeholder">Пароль</label>
+        <input name="password" id="password" class="input" type="password" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Пароль</label>
+    </div>
+
+    <div class="checkbox">
+        <input dirname="rememberme" type="checkbox" name="remember" id="scales">
+        <label for="Scales">Запомнить меня</label>
     </div>
 
     <div class="subtitle auth">
-        <a href=" {{ register }} " class="link l1">
+        <a href=" {{ to_register }} " class="link l1">
             Создать аккаунт
         </a>
     </div>
@@ -49,9 +54,9 @@
     </div>
 
     <a>
-      <button type="submit" class="submit">Войти</button>
+        <button type="submit" class="submit">Войти</button>
     </a>
-  </form>
+</form>
 </body>
 
 </html>

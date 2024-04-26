@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {{ loadfile_css }} ">
+    <link rel="stylesheet" href=" {{ inputfile_css }} ">
+
+    <script defer src=" {{ script_js }} "></script>
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+
+    <title> {{ title }} </title>
 </head>
+
 <body>
-$END$
+<!-- <div class="background">
+<img src="../static/images/background-image.jpg" id="bg_img" />
+</div> -->
+
+<form class="form" action="/load_music" method="post" enctype="multipart/form-data">
+    <div class="title">
+        EchoEnsamble
+    </div>
+    <div class="subtitle">
+        Покажите всем что вы можете!
+    </div>
+    <div class="input-container ic2">
+        <input name="song_name" id="song-name" class="input" type="text" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="song-name" class="placeholder"> Название </label>
+    </div>
+    <div class="input-container ic3">
+        <input name="artist" id="artist" class="input" type="text" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="artist" class="placeholder"> Исполнитель </label>
+    </div>
+    <div class="input-container ic4">
+        <label class="input-file">
+            <input type="file" name="song_file">
+            <span class="input-file-btn"> Песня </span>
+            <span class="input-file-text"> Файл </span>
+        </label>
+    </div>
+    <div class="input-container ic5">
+        <input name="song_link" id="song-link" class="input" type="text" placeholder=" "/>
+        <div class="cut"></div>
+        <label for="song-link" class="placeholder"> Уникальный id для песни </label>
+    </div>
+    <div class="input-container ic6">
+        <label class="input-file">
+            <input type="file" name="song_image">
+            <span class="input-file-btn">Обложка</span>
+            <span class="input-file-text"> Файл </span>
+        </label>
+    </div>
+    <a>
+        <button type="submit" class="submit">Загрузить</button>
+    </a>
+</form>
 </body>
+
 </html>

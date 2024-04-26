@@ -9,11 +9,11 @@ body {
 
 .form {
     position: relative;
-    top: 250px;
+    top: 200px;
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 440px;
+    height: 490px;
     padding: 20px;
     width: 400px;
 }

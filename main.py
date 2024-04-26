@@ -1,26 +1,43 @@
-import datetime
 import logging
 from pprint import pprint
 
 from flask import Flask, request, render_template, redirect, flash, session, url_for, abort
 from flask_login import logout_user, LoginManager, login_user, login_required
+from flask_restful import Api
 
 from config import _USER_DATABASE_, _MUSIC_DATABASE_
-from data.UserLogin import UserLogin
+from data import user_api_resourses, music_api_resourses
 from data.database import UserDB, MusicDB
-from data.forms import LoadFileForm, RegisterForm, LoginForm
+from data.user_login import UserLogin
+from forms.load_fileForm import LoadFileForm
+from forms.loginForm import LoginForm
+from forms.registerForm import RegisterForm
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "qwerty"
-app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=365)
+api = Api(app)
+app.config['SECRET_KEY'] = 'qwerty'
 
-login_manager = LoginManager(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 user_db = None
 music_db = None
+
+
+def main():
+    user_db.global_init("db/site_guessr.db")
+    music_db.global_init("db/site_guessr.db")
+
+    api.add_resource(user_api_resourses.UserListResource, '/api/users')
+    api.add_resource(user_api_resourses.UserResource, '/api/user/<int:users_id>')
+
+    api.add_resource(music_api_resourses.MusicListResource, '/api/music.html')
+    api.add_resource(music_api_resourses.MusicResource, '/api/music/<int:music_id>')
+
+    app.run(port=8088, host='127.0.0.1')
 
 
 @app.before_request
@@ -158,4 +175,4 @@ def page_dont_find(error):
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    main()

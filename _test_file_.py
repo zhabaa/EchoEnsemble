@@ -1,7 +1,6 @@
-from static.data.binary import write_to_file
-from static.data.database import MusicDB
-
 from config import _MUSIC_DATABASE_
+from data.binary import write_to_file
+from data.database import MusicDB
 
 db = MusicDB('music', _MUSIC_DATABASE_)
 
